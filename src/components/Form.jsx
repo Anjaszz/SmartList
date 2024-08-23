@@ -15,10 +15,14 @@ function Form({onAddItem}) {
       if (!name) {
         setError('Nama barang tidak boleh kosong');
         return;
-    }else{
-      setError('')
-      
-    }
+      }
+    
+      if (name.length < 3) {
+        setError('Nama barang harus terdiri dari minimal 3 karakter');
+        return;
+      }
+    
+      setError('');
 
       
      
